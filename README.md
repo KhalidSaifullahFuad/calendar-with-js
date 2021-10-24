@@ -1,1 +1,1 @@
-# calendar-with-vanilla-js
+# Calendar with Vanilla JS
