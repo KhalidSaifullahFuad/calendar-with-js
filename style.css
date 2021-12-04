@@ -151,7 +151,6 @@ body {
 	justify-content: space-evenly;
 }
 
-
 .border-top{
 	border-top: var(--border-width) solid var(--box-shadow);
 }

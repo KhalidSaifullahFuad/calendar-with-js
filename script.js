@@ -1,7 +1,7 @@
-var currentMonth = document.querySelector(".current-month");
-var calendarDays = document.querySelector(".calendar-days");
-var buttons = document.querySelectorAll(".btn");
-var date = new Date();
+const currentMonth = document.querySelector(".current-month");
+const calendarDays = document.querySelector(".calendar-days");
+const buttons = document.querySelectorAll(".btn");
+let date = new Date();
 
 currentMonth.textContent = date.toLocaleDateString("en-US", {month:'long', year:'numeric'});
 renderCalendar();
@@ -22,7 +22,6 @@ function renderCalendar(){
         }else if(i <= startWeekDay+totalMonthDay){
             date.setDate(day);
             date.setHours(0,0,0,0);
-            
             let dayClass = date.getTime()===new Date().setHours(0,0,0,0) ? 'current-day' : 'month-day'; 
             calendarDays.innerHTML += `<div class='${dayClass}'>${day}</div>`;              // adding this month days
         }else{
@@ -31,7 +30,7 @@ function renderCalendar(){
     }
 }
 
-buttons.forEach((btn) => btn.addEventListener("click", function (e){
+buttons.forEach((btn) => btn.addEventListener("click", (e) => {
     let btnClass = String(e.target.classList);
     date = new Date(currentMonth.textContent);
     if(btnClass.includes("today")){
