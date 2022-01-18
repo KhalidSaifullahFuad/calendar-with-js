@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Holiday Calendar 📆</title>
 
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous"/>
 		<link rel="stylesheet" href="style.css" />
 
 		<script src="script.js" defer></script>
@@ -14,9 +14,9 @@
 	<body>
 		<div class="card">
 			<div class="calendar-toolbar">
-				<button type="button" class="btn prev-month"><i class="fas fa-chevron-left"></i></button>
+				<button type="button" title="Previous Month" class="btn prev-month"><span class="fas fa-chevron-left"></span></button>
 				<div class="current-month"></div>
-				<button type="button" class="btn next-month"><i class="fas fa-chevron-right"></i></button>
+				<button type="button" title="Next Month" class="btn next-month"><span class="fas fa-chevron-right"></span></button>
 			</div>
 			
 			<div class="calendar border-top">
