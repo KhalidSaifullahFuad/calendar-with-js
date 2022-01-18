@@ -13,16 +13,16 @@ function renderCalendar(){
     
     calendarDays.innerHTML = "";
 
-    let totalCalendarDay = 6 * 7;
+    const totalCalendarDay = 6 * 7;
     for (let i = 0; i < totalCalendarDay; i++) {
-        let day = i-startWeekDay;
+        const day = i-startWeekDay;
 
         if(i <= startWeekDay){
             calendarDays.innerHTML += `<div class='padding-day'>${prevLastDay-i}</div>`;    // adding previous month days
         }else if(i <= startWeekDay+totalMonthDay){
             date.setDate(day);
             date.setHours(0,0,0,0);
-            let dayClass = date.getTime()===new Date().setHours(0,0,0,0) ? 'current-day' : 'month-day'; 
+            const dayClass = date.getTime()===new Date().setHours(0,0,0,0) ? 'current-day' : 'month-day'; 
             calendarDays.innerHTML += `<div class='${dayClass}'>${day}</div>`;              // adding this month days
         }else{
             calendarDays.innerHTML += `<div class='padding-day'>${day-totalMonthDay}</div>`;// adding next month days
@@ -31,7 +31,7 @@ function renderCalendar(){
 }
 
 buttons.forEach((btn) => btn.addEventListener("click", (e) => {
-    let btnClass = String(e.target.classList);
+    const btnClass = String(e.target.classList);
     date = new Date(currentMonth.textContent);
     if(btnClass.includes("today")){
         date = new Date();
